@@ -18,7 +18,7 @@ public class ShooterPIDSubsystem extends SubsystemBase {
     }
   @Override
     public double getMeasurement() {
-        return m_shooterEncoder.getRate();
+        return getVelocity();
     }
 
 
