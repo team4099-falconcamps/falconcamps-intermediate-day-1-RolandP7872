@@ -2,6 +2,7 @@ package com.team4099.falconcamps.subsystems;
 
 import com.revrobotics.*;
 
+import edu.wpi.first.wpilibj.PIDController;
 import edu.wpi.first.wpilibj2.command.PIDCommand;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
@@ -14,7 +15,7 @@ public class ShooterPIDSubsystem extends SubsystemBase {
         super(new PIDController(ShooterConstants.kP, ShooterConstants.kI, ShooterConstants.kD));
         double ShooterP = 1.7 / 300;
         double ShooterI = 8.0;
-        double ShooterD = 5.5 * 14000;
+        double ShooterD = 5.5 * 14000;s
     }
   @Override
     public double getMeasurement() {
