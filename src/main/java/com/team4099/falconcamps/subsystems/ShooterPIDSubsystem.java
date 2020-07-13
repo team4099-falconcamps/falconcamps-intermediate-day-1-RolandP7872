@@ -11,10 +11,10 @@ public class ShooterPIDSubsystem extends SubsystemBase {
     private final CANEncoder shooterEncoder = shooterLeader.getEncoder();
 
     public ShooterPIDSubsystem() {
-        double ShooterP = 1.7 / 300;
-        double ShooterI = 8.0;
-        double ShooterD = 5.5 * 14000;
-        super(new PIDCommand(ShooterP , ShooterI , ShooterD ));
+        double shooterLeader = 1.7 / 300;
+        double shooterFollower = 8.0;
+        double shooterEncoder = 5.5 * 14000;
+        super(new PIDCommand(shooterLeader , shooterFollower , shooterEncoder ));
     }
 
     @Override
