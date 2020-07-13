@@ -11,6 +11,7 @@ public class ShooterSparkPID extends SubsystemBase {
 
     public ShooterSparkPID() {
         pidController.setReference(0.0, ControlType.kVelocity);
+        
     }
 
     @Override

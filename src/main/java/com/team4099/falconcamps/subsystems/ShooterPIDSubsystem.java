@@ -16,6 +16,12 @@ public class ShooterPIDSubsystem extends SubsystemBase {
         double shooterEncoder = 5.5 * 14000;
         super(new PIDCommand(shooterLeader , shooterFollower , shooterEncoder ));
     }
+    public double useMeasurement(){
+        return getCurrentVelocity()
+    }
+    public void useOutput(double setPoint, double output){
+        shooterLeader.set(output);
+    }
 
     @Override
     public void periodic() {}
