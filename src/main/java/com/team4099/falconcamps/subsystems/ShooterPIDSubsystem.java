@@ -18,7 +18,7 @@ public class ShooterPIDSubsystem extends SubsystemBase {
         
     }
     public double useMeasurement(){
-        return getCurrentVelocity()
+        return getCurrentVelocity();
     }
     
     private double getCurrentVelocity() {
