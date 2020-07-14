@@ -12,21 +12,19 @@ public class ShooterPIDSubsystem extends SubsystemBase {
     private final static CANEncoder shooterEncoder = shooterLeader.getEncoder();
 
     public ShooterPIDSubsystem() {
+        super(new PIDController(1.7 / 300 , 8.0 , 5.5 * 14000));
         double ShooterP = 1.7 / 300;
         double ShooterI = 8.0;
         double ShooterD = 5.5 * 14000;
-        super(new PIDController(ShooterP,ShooterI, ShooterD));
+        
     }
-  @Override
-    public double useMeasurement() {
-        return getVelocity();
+    public double getCurrentVelocity() {
+        return shooterEncoder.getVelocity();
     }
-
-
-    @Override
-    public void useOutput(double output, double setPoint) {
+    public void useOutput(double setPoint, double output) {
         shooterLeader.set(output);
     }
+
 
     @Override
     public void periodic() {}
