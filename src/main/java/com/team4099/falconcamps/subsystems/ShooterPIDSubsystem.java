@@ -14,6 +14,7 @@ public class ShooterPIDSubsystem extends PIDSubsystem {
 
     public ShooterPIDSubsystem() {
         super(new PIDController(1.7 / 300, 8.0, 5.5 * 14000));
+        shooterFollower.follow(shooterLeader , true);
         
     }
     public double getCurrentVelocity() {
