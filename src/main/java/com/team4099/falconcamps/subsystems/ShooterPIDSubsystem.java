@@ -22,7 +22,7 @@ public class ShooterPIDSubsystem extends PIDSubsystem {
     public double getMeasurement(){
         return getCurrentVelocity();
     }
-    public void useOutput(double setPoint, double output) {
+    public void useOutput(double output, double setPoint) {
         shooterLeader.set(output);
     }
 
