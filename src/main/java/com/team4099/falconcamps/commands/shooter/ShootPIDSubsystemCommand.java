@@ -8,11 +8,11 @@ public class ShootPIDSubsystemCommand extends CommandBase {
 
     public ShootPIDSubsystemCommand(ShooterPIDSubsystem shooter) {
         this.shooter = shooter;
-        this.addRequirements(shooter);
+        this.addResquirements(shooter);
     }
 
     @Override
     public void initialize() {
-        shooter.setSetpoint(0);
+        shooter.setSetpoint(5000);
     }
 }
